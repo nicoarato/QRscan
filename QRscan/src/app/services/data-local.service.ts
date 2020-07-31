@@ -46,6 +46,11 @@ export class DataLocalService {
       case 'http':
         // abrir navegador
         this.iab.create(registro.text, '_system');
+        break;
+      case 'geo':
+        // abrir navegador
+        this.navController.navigateForward(`/tabs/tab2/mapa/${registro.text}`);
+        break;
     }
   }
 
